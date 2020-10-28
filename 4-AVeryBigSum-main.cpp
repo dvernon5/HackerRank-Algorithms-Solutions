@@ -18,14 +18,12 @@ long aVeryBigSum(vector<long> ar)
 int main(void)
 {
     int arraySize;
-    cout << "Enter a number for an array size: ";
     cin  >> arraySize;
     
     vector<long> array(arraySize);
     
     for (int i = 0; i < arraySize; i++)
     {
-        cout << "array[" << i << "] = ";
         cin  >> array[i];
     }
     

@@ -8,24 +8,25 @@ int diagonalDifference(vector<vector<int>> arr)
 {
     int rightToLeftDiagonal = 0;
     int leftToRightDiagonal = 0;
+    int length = arr.size();
     
-    for (int i = 0; i < arr.size(); i++)
+    for (int i = 0; i < length; i++)
     {
-        for (int j = 0; j < arr.size(); j++)
+        for (int j = 0; j < length; j++)
         {
             if (i == j)
             {
-                rightToLeftDiagonal += arr[i][j];
+                leftToRightDiagonal += arr[i][j];
             }
             
-            if (i + j == arr.size() - 1)
+            if (i + j == length - 1)
             {
-                leftToRightDiagonal += arr[i][j];
+                rightToLeftDiagonal += arr[i][j];
             }
         }
     }
     
-    return abs(rightToLeftDiagonal - leftToRightDiagonal);
+    return abs(leftToRightDiagonal - rightToLeftDiagonal);
 } // end of diagonalDifference
 
 int main(void)

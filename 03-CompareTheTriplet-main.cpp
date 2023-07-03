@@ -5,21 +5,19 @@ using namespace std;
 // Completed compareTriplets function below
 vector<int> compareTriplets(vector<int> aliceArray, vector<int> bobArray)
 {
-    vector<int> result;
+   vector<int> result;
     int aliceScore = 0, bobScore = 0;
-
-    for (int i = 0; i < aliceArray.size(); i++)
+    
+    for (int i = 0; i < a.size(); ++i)
     {
-        if (aliceArray[i] > bobArray[i])
+        if (a[i] > b[i])
         {
-            aliceScore++;
-        }
-        else if (aliceArray[i] < bobArray[i])
-        {
-            bobScore++;
+            ++aliceScore;
+        } else if (a[i] < b[i]) {
+            ++bobScore;
         }
     }
-
+    
     result.push_back(aliceScore);
     result.push_back(bobScore);
     
